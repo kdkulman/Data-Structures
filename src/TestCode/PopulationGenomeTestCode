@@ -1,0 +1,24 @@
+        //        double averageGenerations = 0;
+        //        int trials = 0;
+        //        int totalNumGenerations = 0;
+        //        long averageTime = 0;
+        //        long totalTime = 0;
+        //        long startTime = System.currentTimeMillis(); //START TIMING METHOD
+        //        while (trials < 1) {
+        //            trials++;
+        //            Population pop = new Population();
+        //            while (pop.mostFit.fitness() < 0) {
+        //                System.out.print("Generation " + pop.generation + "");
+        //                System.out.println(":    " + pop.mostFit + ", " + pop.mostFit.fitness() + "");
+        //                pop.nextGeneration();
+        //            }
+        //            totalNumGenerations += pop.generation;
+        //        }
+        //        long endTime = System.currentTimeMillis();
+        //        totalTime = (endTime - startTime); //in milliseconds
+        //        averageTime = totalTime / trials;
+        //        averageGenerations = totalNumGenerations/trials;
+        //        System.out.println("Average generations: " + averageGenerations);
+        //        System.out.println(" for " + trials + " trials.");
+        //        System.out.println("Average time: " + averageTime + " milliseconds.");
+

@@ -1,0 +1,126 @@
+//TEST CODE FOR MYPRIORITY QUEUE
+
+        MyPriorityQueue<Integer> q = new MyPriorityQueue<>();
+
+        //TEST 1
+        q.insert(4);
+        test(q.toString(), "[4]");
+
+        //TEST 2
+        q.insert(2);
+        test(q.toString(), "[2, 4]");
+
+        //TEST 3
+        q.insert(1);
+        test(q.toString(), "[1, 4, 2]");
+
+        //TEST 4
+        q.insert(9);
+        test(q.toString(), "[1, 4, 2, 9]");
+
+        //TEST 5
+        q.insert(-8);
+        test(q.toString(), "[-8, 1, 2, 9, 4]");
+
+        //TEST 6
+        q.insert(-7);
+        test(q.toString(), "[-8, 1, -7, 9, 4, 2]");
+
+        //TEST 7
+        q.removeMin();
+        test(q.toString(), "[-7, 1, 2, 9, 4]");
+
+        //TEST 8
+        q.insert(12);
+        q.insert(-1);
+        q.insert(50);
+        q.insert(22);
+        test(q.toString(), "[-7, 1, -1, 9, 4, 12, 2, 50, 22]");
+
+        //TEST 9
+        MyPriorityQueue<Integer> heap = new MyPriorityQueue<>();
+        test(heap.toString(), "[]");
+
+        //TEST 10
+        heap.insert(4);
+        test(heap.toString(), "[4]");
+
+        //TEST 11
+        heap.insert(7);
+        test(heap.toString(), "[4, 7]");
+
+        //TEST 12
+        heap.insert(5);
+        test(heap.toString(), "[4, 7, 5]");
+
+        //TEST 13
+        heap.insert(2);
+        test(heap.toString(), "[2, 4, 5, 7]");
+
+        //TEST 14
+        heap.insert(3);
+        test(heap.toString(), "[2, 3, 5, 7, 4]");
+
+        //TEST 15
+        heap.insert(6);
+        test(heap.toString(), "[2, 3, 5, 7, 4, 6]");
+
+        //TEST 16
+        heap.insert(8);
+        test(heap.toString(), "[2, 3, 5, 7, 4, 6, 8]");
+
+        //TEST 17
+        heap.insert(9);
+        test(heap.toString(), "[2, 3, 5, 7, 4, 6, 8, 9]");
+
+        //TEST 18
+        heap.insert(1);
+        test(heap.toString(), "[1, 2, 5, 3, 4, 6, 8, 9, 7]");
+
+        //TEST 19
+        heap.insert(0);
+        test(heap.toString(), "[0, 1, 5, 3, 2, 6, 8, 9, 7, 4]");
+
+        //TEST 20
+        heap.removeMin(); // 0
+        test(heap.toString(), "[1, 2, 5, 3, 4, 6, 8, 9, 7]");
+
+        //TEST 21
+        heap.removeMin(); //1
+        test(heap.toString(), "[2, 3, 5, 7, 4, 6, 8, 9]");
+
+        //TEST 22
+        heap.removeMin();// 2
+        test(heap.toString(), "[3, 4, 5, 7, 9, 6, 8]");
+
+        //TEST 23
+        heap.removeMin();// 3
+        test(heap.toString(), "[4, 7, 5, 8, 9, 6]");
+
+        //TEST 24
+        heap.removeMin();// 4
+        test(heap.toString(), "[5, 7, 6, 8, 9]");
+
+        //TEST 25
+        heap.removeMin();// 5
+        test(heap.toString(), "[6, 7, 9, 8]");
+
+        //TEST 26
+        heap.removeMin();// 6
+        test(heap.toString(), "[7, 8, 9]");
+
+        //TEST 27
+        heap.removeMin();//removeMin: 7
+        test(heap.toString(), "[8, 9]");
+
+        //TEST 28
+        heap.removeMin();// 8
+        test(heap.toString(), "[9]");
+
+        //TEST 29
+        heap.removeMin();// 9
+        test(heap.toString(), "[]");
+
+        //TEST 30
+        heap.removeMin();// null
+        test(heap.toString(), "[]");

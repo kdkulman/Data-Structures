@@ -1,0 +1,74 @@
+        //CREATE LINKED LIST
+       MyLinkedList list = new MyLinkedList<>();
+
+       //A TON OF TESTS - READ THE OUTPUT CONSOLE TO CHECK CORRECTNESS
+
+
+        System.out.println("" + list.contains(2) + ", should be false");
+        list.addBefore(1);
+        System.out.println("List is: " + list.toString() + ", should be [1]");
+        list.addBefore(2);
+        System.out.println("List is: " + list.toString() + ", should be [1, 2]");
+        list.addBefore(3);
+        System.out.println("List is: " + list.toString() + ", should be [1, 2, 3]");
+        System.out.println("Current is: " + list.first() + ", should be 1");
+        list.addAfter(4);
+        System.out.println("List is: " + list.toString() + ", should be [1, 4, 2, 3]");
+        System.out.println("Current value is: " + list.current() + ", should be 1");
+        System.out.println("Next value is: " + list.next() + ", should be 4");
+        System.out.println("Current value is: " + list.current() + ", should be 4");
+        System.out.println("Next value is: " + list.next() + ", should be 2");
+        System.out.println("Current value is: " + list.current() + ", should be 2");
+        list.addBefore(5);
+        System.out.println("List is: " + list.toString() + ", should be [1, 4, 5, 2, 3]");
+        list.addBefore(6);
+        System.out.println("List is: " + list.toString() + ", should be [1, 4, 5, 6, 2, 3]");
+        list.remove(); // 2
+        System.out.println("List is: " + list.toString() + ", should be [1, 4, 5, 6, 3]");
+        System.out.println("Current is " + list.current() + ", should be 3");
+        System.out.println("" + list.contains(2) + ", should be false");
+        System.out.println("Current is: " + list.first() + ", should be 1");
+        System.out.println("Removed: " + list.remove() + ", should be 1");
+        System.out.println("Removed: " + list.remove() + ", should be 4");
+        System.out.println("Removed: " + list.remove() + ", should be 5");
+        System.out.println("Removed: " + list.remove() + ", should be 6");
+        System.out.println("Current is: " + list.first() + ", should be 3");
+        System.out.println("Removed: " + list.remove() + ", should be 3");
+        System.out.println("Removed: " + list.remove() + ", should be null");
+        System.out.println("List is: " + list + ", should be []");
+        list.first();
+        list.next();
+        System.out.println("List is empty: " + list.isEmpty() + ", should be true");
+        System.out.println("List contains yo mama: " + list.contains("yomama") + ", should be false");
+        System.out.println("Current is: "+ list.current() + ", should be null");
+        list.addAfter(15);
+        list.addAfter(36);
+        System.out.println("List is: " + list.toString() + ", should be []");
+        System.out.println("Size is: " + list.size() + ", should be 0");
+        list.addBefore("Jacob");
+        System.out.println("List is: " + list.toString() + ", should be [Jacob]");
+        list.addBefore(9.73838239);
+        System.out.println("Current is: " + list.current() + ", should be null");
+        System.out.println("List is: " + list.toString() + ", should be [Jacob, 9.73838239]");
+        list.addAfter(true);
+        System.out.println("List is: " + list.toString() + ", should be [Jacob, 9.73838239]");
+        System.out.println("Current is: " + list.next() + ", should be null");
+        System.out.println("Current is: " + list.first() + ", should be Jacob");
+        list.addBefore("Marty");
+        System.out.println("List is: " + list.toString() + ", should be [Marty, Jacob, 9.73838239]");
+        list.addAfter("Gloria");
+        System.out.println("List is: " + list.toString() + ", should be [Marty, Jacob, Gloria, 9.73838239]");
+        list.next();
+        list.next();
+        System.out.println("Current is: " + list.current() + ", should be 9.73838239");
+        list.addAfter("Alex");
+        System.out.println("List is: " + list.toString() + ", should be [Marty, Jacob, Gloria, 9.73838239, Alex]");
+        list.addBefore("1.1");
+        System.out.println("List is: " + list.toString() + ", should be [Marty, Jacob, Gloria, 1.1, 9.73838239, Alex]");
+        list.next();
+        list.next();
+        System.out.println("Current is: " + list.current() + ", should be Alex");
+        list.addAfter("ONE MORE");
+        System.out.println("List is: " + list.toString() + ", should be [Marty, Jacob, Gloria, 1.1, 9.73838239, Alex, ONE MORE]");
+        list.addBefore("Congrats!");
+        System.out.println("List is: " + list.toString() + ", should be [Marty, Jacob, Gloria, 1.1, 9.73838239, Congrats!, Alex, ONE MORE]");

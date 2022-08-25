@@ -1,0 +1,118 @@
+        /*
+         * TEST CODE FOR TransposeList
+         */
+
+       // TransposeList<Integer> list = new TransposeList<>();
+
+        //TEST 1
+        test("" + list.remove(0), "null");
+
+        //TEST 2
+        test("" + list.size(), "0");
+
+        //TEST 3
+        test("" + list.find(6), "null");
+
+        //TEST 4
+        test("" + list.isEmpty(), "true");
+
+        //TEST 5
+        test("" + list.find(10), "null");
+
+        //TEST 6
+        list.add(1);
+        test(list.toString(), "[1]");
+
+        //TEST 7
+        test("" + list.remove(1), "1");
+
+        //TEST 8
+        for(int i = 9; i >= 0; i--){
+            list.add(i);
+        }
+        test(list.toString(), "[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]");
+
+        //TEST 9
+        list.remove(7);
+        list.remove(0);
+        list.remove(9);
+        test(list.toString(), "[8, 6, 5, 4, 3, 2, 1]");
+
+        //TEST 10
+        test("" + list.find(8), "8");
+
+        //TEST 11
+        test(list.toString(), "[8, 6, 5, 4, 3, 2, 1]");
+
+        //TEST 12
+        test("" + list.find(-8), "null");
+
+        //TEST 13
+        test(list.toString(), "[8, 6, 5, 4, 3, 2, 1]" );
+
+        //TEST 14
+        list.find(8);
+        test(list.toString(), "[8, 6, 5, 4, 3, 2, 1]" );
+
+        //TEST 15
+        list.find(6);
+        test(list.toString(),"[6, 8, 5, 4, 3, 2, 1]" );
+
+        //TEST 16
+        list.find(1);
+        test(list.toString(),"[6, 8, 5, 4, 3, 1, 2]" );
+
+        //TEST 17
+        list.find(6);
+        list.find(4);
+        list.find(2);
+        test(list.toString(),"[6, 8, 4, 5, 3, 2, 1]" );
+
+        //TEST 18
+        list.add(900);
+        list.add(76);
+        list.add(666);
+        test("" + list.toString(), "[6, 8, 4, 5, 3, 2, 1, 900, 76, 666]");
+
+        //TEST 19
+        test("" + list.isEmpty(), "false");
+
+        //TEST 20
+        list.remove(666);
+        list.remove(6);
+        list.remove(5);
+        list.find(900);
+        list.find(900);
+        list.add(55);
+        list.find(55);
+        test("" + list.toString(), "[8, 4, 3, 900, 2, 1, 55, 76]");
+
+        //TEST 21
+        list.remove(8);
+        list.add(5);
+        list.find(900);
+        list.add(88);
+        list.find(88);
+        list.remove(88);
+        list.add(1);
+        list.find(1);
+        list.remove(4);
+        list.remove(1);
+        test("" + list.toString(), "[900, 3, 2, 55, 76, 5, 1]");
+
+        //TEST 22
+        test("" + list.find(55), "55");
+
+        //TEST 23
+        test("" + list.find(12), "null");
+
+        //TEST 24
+        test("" + list.find(1), "1");
+
+        //TEST 25
+        test("" + list.find(-1), "null");
+
+        //TEST 26
+        test("" + list.find(900), "900");
+
+

@@ -1,0 +1,68 @@
+ MyBinarySearchTree<Integer> tree = new MyBinarySearchTree();
+
+        //TEST 1
+        test("" + tree.size(), "0");
+
+        //TEST 2
+        tree.add(1);
+        test("" + tree.size(), "1");
+
+        //TEST 3
+        test(tree.toString(), "[1:H0]");
+
+        //TEST 4
+        tree.add(5);
+        test("" + tree.size(), "2");
+
+        //TEST 5
+        test(tree.toString(), "[1:H1, 5:H0]");
+
+        //TEST 6
+        tree.add(-7);
+        test(tree.toString(), "[-7:H0, 1:H1, 5:H0]");
+
+        //TEST 7
+        tree.add(-9);
+        test(tree.toString(), "[-9:H0, -7:H1, 1:H2, 5:H0]");
+
+        //TEST 8
+        tree.add(0);
+        test(tree.toString(), "[-9:H0, -7:H1, 0:H0, 1:H2, 5:H0]");
+
+        //TEST 9
+        test("" + tree.find(5), "5");
+
+        //TEST 10
+        test("" + tree.find(9), "null");
+
+        //TEST 11
+        test("" + tree.find(-98), "null");
+
+        //TEST 12
+        tree.remove(-9);
+        test(tree.toString(), "[-7:H1, 0:H0, 1:H2, 5:H0]");
+
+        //TEST 13
+        tree.remove(0);
+        test(tree.toString(), "[-7:H0, 1:H1, 5:H0]");
+
+        //TEST 14
+        test("" + tree.find(-9), "null");
+
+        //TEST 15
+        test("" + tree.find(0), "null");
+
+        MyBinarySearchTree<Integer> tree2 = new MyBinarySearchTree<Integer>();
+        tree2.add(9);
+        tree2.add(8);
+        tree2.add(7);
+        tree2.add(6);
+        tree2.add(5);
+        tree2.add(4);
+        tree2.add(3);
+        tree2.add(2);
+        tree2.add(1);
+        tree2.add(0);
+        test("" + tree2.find(10), "null");
+
+        UniqueWords w = new UniqueWords();

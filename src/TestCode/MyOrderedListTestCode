@@ -1,0 +1,50 @@
+        /*
+         * TEST FOR MYORDEREDLIST
+         *
+         */
+        MyOrderedList<Integer> orderedList = new MyOrderedList<>();
+
+        //TEST 1
+        orderedList.add(8);
+        orderedList.add(4);
+        orderedList.add(-12);
+        orderedList.add(800);
+        orderedList.add(-7);
+        test(orderedList.toString(), "[-12, -7, 4, 8, 800]");
+
+        //TEST 2
+        test("" + orderedList.binarySearch(-7), "true");
+
+        //TEST 3
+        test("" + orderedList.binarySearch(-8), "false");
+
+        //TEST 4
+        orderedList.remove(-12);
+        orderedList.remove(800);
+        orderedList.remove(4);
+        test(orderedList.toString(), "[-7, 8]");
+
+        //TEST 5
+        test("" + orderedList.remove(8), "8");
+
+        //TEST 6
+        orderedList.remove(-7);
+        test(orderedList.toString(), "[]");
+
+        //TEST 7
+        test("" + orderedList.remove(900), "null");
+
+        //TEST 8
+        test("" + orderedList.binarySearch(-2), "false");
+
+
+        //TEST 9
+        orderedList.add(20);
+        orderedList.add(10);
+        orderedList.add(30);
+        orderedList.add(40);
+        orderedList.add(0);
+        test(orderedList.toString(), "[0, 10, 20, 30, 40]");
+
+        //TEST 10
+        test("" + orderedList.binarySearch(30), "true");

@@ -1,0 +1,32 @@
+        MyTrie<String> t = new MyTrie<>();
+
+        t.insert("Dog");
+        t.insert("Danish");
+        t.insert("Bussy");
+        t.insert("78");
+        t.insert("Zebras");
+        t.insert("Howard");
+        t.insert("Morbintime");
+
+        //TEST 1
+        test("" + t.find("Dog"), "true");
+
+        //TEST 2
+        test("" + t.find("Dogg"), "false");
+
+        //TEST 3
+        test("" + t.find("M"), "false");
+
+        //TEST 4
+        test("" + t.find("Morbintime"), "true");
+
+        //TEST 5
+        t.remove("Dog");
+        test("" + t.find("Dog"), "false");
+
+        //TEST 6
+        t.remove("Dog");
+        test("" + t.find("Dog"), "false");
+
+        //TEST 7
+        test("" + t.size(), "6");
